@@ -63,8 +63,20 @@ A comprehensive Software Requirements Specification (SRS) document generation sy
 3. **Install backend dependencies**
    ```bash
    cd backend
+   python -m venv venv
+   venv\scripts\activate
    pip install -r requirements.txt
-   cd ..
+   cd..
+   ```
+
+   **Run the Project**
+   in Frontend Terminal
+   ```bash
+   npm run dev
+   ```
+   in Backend Terminal
+   ```bash
+   uvicorn backend.app:socket_app --host 0.0.0.0 --port 8000
    ```
 
 4. **Set up environment variables**
