@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-white font-sans text-secondary-800 antialiased;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-secondary-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-secondary-300 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-secondary-400;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply backdrop-blur-lg bg-white/70 border border-white/20;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-primary-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition-all hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-lg bg-white px-4 py-2 text-sm font-medium text-secondary-700 shadow-sm ring-1 ring-inset ring-secondary-300 transition-all hover:bg-secondary-50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium text-secondary-700 transition-all hover:bg-secondary-100 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .input-field {
+    @apply block w-full rounded-lg border-0 px-4 py-2 text-secondary-900 shadow-sm ring-1 ring-inset ring-secondary-300 placeholder:text-secondary-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6;
+  }
+
+  .card {
+    @apply rounded-xl bg-white p-6 shadow-sm ring-1 ring-secondary-200;
+  }
+
+  .loading-spinner {
+    @apply h-4 w-4 animate-spin rounded-full border-2 border-secondary-200 border-t-primary-600;
+  }
+}
+
+/* CKEditor custom styles */
+.ck-editor {
+  @apply border-secondary-200 rounded-lg;
+}
+
+.ck-editor__main {
+  @apply min-h-96;
+}
+
+.ck-editor__editable {
+  @apply focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+}
+
+.ck-content {
+  @apply text-secondary-800 leading-relaxed;
+}
+
+.ck-content h1, .ck-content h2, .ck-content h3, .ck-content h4, .ck-content h5, .ck-content h6 {
+  @apply font-semibold text-secondary-900 mt-6 mb-3;
+}
+
+.ck-content h1 { @apply text-2xl; }
+.ck-content h2 { @apply text-xl; }
+.ck-content h3 { @apply text-lg; }
+
+.ck-content p {
+  @apply mb-3;
+}
+
+.ck-content ul, .ck-content ol {
+  @apply ml-6 mb-3;
+}
+
+.ck-content li {
+  @apply mb-1;
+}
+
+.ck-content blockquote {
+  @apply border-l-4 border-primary-200 pl-4 italic text-secondary-600 my-4;
+}
+
+.ck-content code {
+  @apply bg-secondary-100 px-2 py-1 rounded font-mono text-sm;
+}
+
+.ck-content pre {
+  @apply bg-secondary-100 p-4 rounded font-mono text-sm overflow-x-auto my-4;
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    transform: translateY(20px); 
+    opacity: 0; 
+  }
+  to { 
+    transform: translateY(0); 
+    opacity: 1; 
+  }
+}
+
+/* Drag and drop styles */
+.drag-active {
+  @apply border-primary-400 bg-primary-50;
+}
+
+.drag-reject {
+  @apply border-red-400 bg-red-50;
+}

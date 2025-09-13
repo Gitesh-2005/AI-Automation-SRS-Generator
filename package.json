@@ -1,0 +1,48 @@
+{
+  "name": "srs-generator-system",
+  "version": "1.0.0",
+  "description": "AI-Powered SRS Generation System with real-time collaboration",
+  "private": true,
+  "scripts": {
+    "dev": "vite --port 3000",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "backend": "cd backend && python app.py",
+    "start": "concurrently \"npm run backend\" \"npm run dev\"",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.18.0",
+    "@ckeditor/ckeditor5-react": "^6.2.0",
+    "@ckeditor/ckeditor5-build-classic": "^40.1.0",
+    "@ckeditor/ckeditor5-build-decoupled-document": "^40.1.0",
+    "socket.io-client": "^4.7.4",
+    "axios": "^1.6.1",
+    "framer-motion": "^10.16.5",
+    "lucide-react": "^0.292.0",
+    "react-hot-toast": "^2.4.1",
+    "react-dropzone": "^14.2.3",
+    "tailwind-merge": "^2.0.0",
+    "clsx": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@types/node": "^20.9.0",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "@vitejs/plugin-react": "^4.1.1",
+    "autoprefixer": "^10.4.16",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.53.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.4",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0"
+  }
+}

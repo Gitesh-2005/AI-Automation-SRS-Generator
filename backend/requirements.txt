@@ -1,0 +1,42 @@
+# --- Core FastAPI dependencies ---
+fastapi>=0.104.1,<0.111.0
+uvicorn[standard]>=0.24.0,<0.31.0
+python-multipart>=0.0.6
+aiofiles>=23.2.1
+
+# --- CORS and WebSocket support ---
+python-socketio>=5.10.0
+
+# --- LangChain / Groq LLM stack ---
+langchain-groq>=0.1.9
+langchain-core>=0.2.38
+langgraph>=0.2.16
+langchain>=0.2.16
+
+# --- Document processing ---
+PyPDF2>=3.0.1
+python-docx>=1.1.0
+python-pptx>=0.6.23
+markdown>=3.5.1
+
+# --- OCR and image processing ---
+easyocr>=1.7.0
+opencv-python>=4.8.1.78
+
+# --- File type detection ---
+python-magic>=0.4.27
+python-magic-bin>=0.4.14  # Windows compatibility
+
+# --- PDF generation ---
+reportlab>=4.0.7
+
+# --- Data validation ---
+pydantic>=2.7.4,<3.0.0
+
+# --- Logging ---
+python-json-logger>=2.0.7
+
+# --- Optional: Database support ---
+sqlalchemy>=2.0.23
+databases[postgresql]>=0.8.0
+alembic>=1.12.1

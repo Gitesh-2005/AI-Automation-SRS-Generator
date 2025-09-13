@@ -3,6 +3,14 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# Node / React
+node_modules/
+.next/
+dist/
+build/
+.parcel-cache/
+*.log
+
 # C extensions
 *.so
 
@@ -136,6 +144,7 @@ celerybeat.pid
 
 # Environments
 .env
+*.env
 .envrc
 .venv
 env/
