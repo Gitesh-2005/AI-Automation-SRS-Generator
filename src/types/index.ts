@@ -30,9 +30,27 @@ export interface UploadResponse {
 }
 
 export interface ExportRequest {
-  document_id: string;
-  format: 'pdf' | 'docx' | 'md' | 'latex';
-  content: string;
+  document_id: string
+  format: 'pdf' | 'docx' | 'md'
+  content: string
+}
+
+export interface AIEditRequest {
+  current_content: string
+  edit_instructions: string
+  document_id?: string
+}
+
+export interface AIEditResponse {
+  status: string
+  edited_content: string
+}
+
+export interface StreamingAIEditState {
+  isStreaming: boolean
+  streamedContent: string
+  error: string | null
+  validationWarnings: string[]
 }
 
 export interface User {
@@ -64,7 +82,7 @@ export interface HealthCheck {
   ocr_available: boolean;
 }
 
-export type FileFormat = 'pdf' | 'docx' | 'pptx' | 'md' | 'latex' | 'txt' | 'json';
+export type FileFormat = 'pdf' | 'docx' | 'pptx' | 'md' | 'txt' | 'json';
 
 export interface ProcessingStatus {
   status: 'uploading' | 'processing' | 'completed' | 'error';

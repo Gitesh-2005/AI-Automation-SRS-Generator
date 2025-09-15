@@ -7,7 +7,9 @@ import type {
   ChatResponse, 
   UploadResponse, 
   ExportRequest, 
-  HealthCheck 
+  HealthCheck,
+  AIEditRequest,
+  AIEditResponse
 } from '../types'
 
 // Create axios instance with default config
@@ -96,6 +98,12 @@ export const sendChatMessage = async (message: ChatMessage): Promise<ChatRespons
   return response.data
 }
 
+// AI Edit operations
+export const sendAIEditRequest = async (editRequest: AIEditRequest): Promise<AIEditResponse> => {
+  const response = await api.post('/ai-edit', editRequest)
+  return response.data
+}
+
 // Export operations
 export const exportDocument = async (
   documentId: string, 
@@ -123,6 +131,19 @@ export const downloadBlob = (blob: Blob, filename: string) => {
   window.URL.revokeObjectURL(url)
 }
 
+// Direct export function for better control
+export const exportDirect = async (content: string, format: string, filename?: string): Promise<Blob> => {
+  const response = await api.post('/export-direct', {
+    content,
+    format,
+    filename: filename || 'srs-document'
+  }, {
+    responseType: 'blob'
+  })
+  
+  return response.data
+}
+
 // File type detection
 export const getFileType = (filename: string): string => {
   const extension = filename.split('.').pop()?.toLowerCase()
@@ -138,9 +159,6 @@ export const getFileType = (filename: string): string => {
       return 'PowerPoint Presentation'
     case 'md':
       return 'Markdown Document'
-    case 'tex':
-    case 'latex':
-      return 'LaTeX Document'
     case 'txt':
       return 'Text Document'
     case 'json':

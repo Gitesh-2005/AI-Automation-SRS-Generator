@@ -11,7 +11,7 @@ A comprehensive Software Requirements Specification (SRS) document generation sy
 
 ### 📄 Multi-Format Support
 - **Input Formats**: PDF, Word (.doc/.docx), PowerPoint (.ppt/.pptx), Markdown (.md), LaTeX (.tex)
-- **Export Formats**: PDF, Word, Markdown, LaTeX
+- **Export Formats**: PDF, Word, Markdown
 - **OCR Processing**: PaddleOCR integration for image text extraction
 
 ### ⚡ Real-Time Collaboration

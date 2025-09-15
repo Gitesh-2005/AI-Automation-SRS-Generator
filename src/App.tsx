@@ -5,8 +5,7 @@ import { motion } from 'framer-motion'
 // Pages
 import HomePage from './pages/HomePage'
 import UploadPage from './pages/UploadPage'
-import GeneratePage from './pages/GeneratePage'
-import EditorPage from './pages/EditorPage'
+import WorkspacePage from './pages/WorkspacePage'
 
 // Components
 import Navbar from './components/Navbar'
@@ -26,8 +25,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/upload" element={<UploadPage />} />
-            <Route path="/generate" element={<GeneratePage />} />
-            <Route path="/editor/:documentId?" element={<EditorPage />} />
+            <Route path="/workspace/:documentId?" element={<WorkspacePage />} />
           </Routes>
         </motion.main>
       </div>

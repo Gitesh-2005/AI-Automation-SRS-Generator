@@ -351,22 +351,22 @@ const UploadPage: React.FC = () => {
                   onClick={() => {
                     const completedFiles = uploadedFiles.filter(f => f.status === 'completed')
                     if (completedFiles.length > 0) {
-                      navigate('/generate', { 
+                      navigate('/workspace', { 
                         state: { uploadedFiles: completedFiles.map(f => f.result) }
                       })
                     }
                   }}
                   className="btn-primary group"
                 >
-                  Generate SRS Document
+                  Open AI Workspace
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </button>
                 
                 <button
-                  onClick={() => navigate('/editor')}
+                  onClick={() => navigate('/workspace')}
                   className="btn-secondary"
                 >
-                  Start with Blank Editor
+                  Start with Blank Workspace
                 </button>
               </div>
             </div>

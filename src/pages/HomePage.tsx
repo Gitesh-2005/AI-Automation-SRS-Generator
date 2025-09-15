@@ -39,7 +39,7 @@ const HomePage: React.FC = () => {
     {
       icon: Download,
       title: 'Export Anywhere',
-      description: 'Export your SRS documents to PDF, Word, Markdown, or LaTeX formats',
+      description: 'Export your SRS documents to PDF, Word, Markdown',
       color: 'from-orange-500 to-orange-600'
     }
   ]
@@ -141,9 +141,9 @@ const HomePage: React.FC = () => {
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
                 
-                <Link to="/generate" className="btn-secondary">
+                <Link to="/workspace" className="btn-secondary">
                   <Bot className="mr-2 h-4 w-4" />
-                  Try AI Generation
+                  AI Workspace
                 </Link>
               </motion.div>
 
@@ -178,7 +178,7 @@ const HomePage: React.FC = () => {
                 <motion.div
                   animate={{ y: [0, -10, 0] }}
                   transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                  className="absolute -top-8 left-8 rounded-xl bg-white p-4 shadow-lg ring-1 ring-secondary-200"
+                  className="absolute -top-12 left-8 rounded-xl bg-white p-4 shadow-lg ring-1 ring-secondary-200"
                 >
                   <div className="flex items-center space-x-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-100">
@@ -187,29 +187,6 @@ const HomePage: React.FC = () => {
                     <div>
                       <div className="text-sm font-medium text-secondary-900">
                         SRS Document
-                      </div>
-                      <div className="text-xs text-secondary-500">
-                        Auto-generated
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  animate={{ y: [0, 10, 0] }}
-                  transition={{ repeat: Infinity, duration: 4, ease: "easeInOut", delay: 2 }}
-                  className="absolute -right-8 top-16 rounded-xl bg-white p-4 shadow-lg ring-1 ring-secondary-200"
-                >
-                  <div className="flex items-center space-x-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-100">
-                      <Users className="h-5 w-5 text-green-600" />
-                    </div>
-                    <div>
-                      <div className="text-sm font-medium text-secondary-900">
-                        3 Collaborators
-                      </div>
-                      <div className="text-xs text-secondary-500">
-                        Live editing
                       </div>
                     </div>
                   </div>

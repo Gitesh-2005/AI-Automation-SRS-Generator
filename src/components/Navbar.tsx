@@ -4,8 +4,7 @@ import { motion } from 'framer-motion'
 import { 
   FileText, 
   Upload, 
-  Bot, 
-  Edit3, 
+  Layers, 
   Sparkles,
   Github,
   Heart 
@@ -17,8 +16,7 @@ const Navbar: React.FC = () => {
   const navItems = [
     { path: '/', label: 'Home', icon: FileText },
     { path: '/upload', label: 'Upload', icon: Upload },
-    { path: '/generate', label: 'Generate', icon: Bot },
-    { path: '/editor', label: 'Editor', icon: Edit3 },
+    { path: '/workspace', label: 'Workspace', icon: Layers },
   ]
 
   const isActive = (path: string) => {
@@ -101,24 +99,13 @@ const Navbar: React.FC = () => {
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              href="https://github.com/yourusername/srs-generator"
+              href="https://github.com/Gitesh-2005/AI-Automation-SRS-Generator.git"
               target="_blank"
               rel="noopener noreferrer"
               className="flex h-8 w-8 items-center justify-center rounded-lg text-secondary-600 transition-colors hover:bg-secondary-100 hover:text-secondary-900"
             >
               <Github className="h-4 w-4" />
             </motion.a>
-            
-            {/* Made with love indicator */}
-            <div className="hidden items-center space-x-1 text-xs text-secondary-500 md:flex">
-              <span>Made with</span>
-              <motion.div
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ repeat: Infinity, duration: 2 }}
-              >
-                <Heart className="h-3 w-3 text-red-500" fill="currentColor" />
-              </motion.div>
-            </div>
           </div>
         </div>
       </div>
